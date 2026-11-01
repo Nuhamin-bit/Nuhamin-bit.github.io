@@ -1,0 +1,38 @@
+/* Portfolio: deep teal ink, warm gold accent, serif display with a clean sans body. Matches the pitch deck. */
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --ink:#10282b; --muted:#4d5f61; --line:#dde3e1;
+  --accent:#1f6f68; --accent-ink:#ffffff; --gold:#9a6b12; --soft:#e7efed;
+  --band:#10282b; --band-ink:#f3f1ea; --band-muted:#b9cecb; --band-gold:#d9a441;
+  --display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --body:"Public Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0c1b1d; --surface:#122629; --ink:#e9efed; --muted:#a7bbb8; --line:#24393c;
+  --accent:#5cc0b5; --accent-ink:#0c1b1d; --gold:#e1b45b; --soft:#173235;
+  --band:#081416; --band-ink:#f3f1ea; --band-muted:#a7bbb8; --band-gold:#e1b45b; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,4.4rem)}
+h2{font-size:clamp(1.9rem,4.5vw,2.7rem)}
+h3{font-size:1.4rem}
+p{margin:0}
+a{color:var(--accent)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.btn{display:inline-block;font:inherit;font-weight:600;font-size:.95rem;border-radius:999px;padding:12px 22px;text-decoration:none;border:1.5px solid transparent}
+.btn.gold{background:var(--band-gold);color:#10282b}
+.btn.line{border-color:currentColor;color:inherit}
+.btn.solid{background:var(--accent);color:var(--accent-ink)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--band-gold);outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+nav.top{position:sticky;top:0;z-index:10;background:var(--band);color:var(--band-ink)}
+nav.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;flex-wrap:wrap}
+nav.top .brand{font-family:var(--display);font-size:1.25rem;color:var(--band-ink);text-decoration:none}
+nav.top .links{display:flex;gap:20px;flex-wrap:wrap}
+nav.top .links a{color:var(--band-muted);text-decoration:none;font-size:.95rem;font-weight:500}
+nav.top .links a:hover,nav.top .links a[aria-current]{color:var(--band-gold)}
+footer.site{border-top:1px solid var(--line);padding-block:32px 48px;color:var(--muted);font-size:.9rem}
