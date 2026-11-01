@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nuhamin H. Tesfay | AI Governance, Risk &amp; Enablement</title>
+<meta name="description" content="Hi, I'm Nuhamin. I help organizations adopt AI safely and get real value from it: AI governance, risk, security and enablement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{padding-block:56px 72px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:32px}.portrait{order:-1;justify-self:center}}
+.hello{display:grid;gap:20px}
+.wave{font-size:1rem;color:var(--muted)}
+.rotate{color:var(--accent);font-style:italic;font-family:var(--display);font-weight:400;display:inline-block;transition:opacity .35s ease}
+.lead{font-size:clamp(1.1rem,2.3vw,1.3rem);color:var(--muted);max-width:42ch}
+.belief{font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.5rem);color:var(--gold);border-left:3px solid var(--halo);padding-left:14px}
+.portrait{position:relative;width:min(320px,70vw);aspect-ratio:1}
+.portrait::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--halo) 55%,transparent) 0%,transparent 70%);animation:glow 5s ease-in-out infinite}
+.portrait::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--halo);opacity:.8}
+@keyframes glow{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.05);opacity:1}}
+.portrait img,.portrait .initials{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.portrait .initials{display:grid;place-items:center;background:var(--sage);font-family:var(--display);font-size:4.5rem;color:var(--accent)}
+.badge{position:absolute;right:-6px;bottom:18px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:600;box-shadow:0 8px 24px rgba(21,48,47,.12)}
+.badge span{color:var(--accent)}
+section.block{padding-block:72px}
+section.block>.wrap{display:grid;gap:32px}
+.head{display:grid;gap:10px;max-width:46rem}
+.tint-blush{background:var(--blush)}
+.tint-sage{background:var(--sage)}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:820px){.pillars{grid-template-columns:1fr}}
+.pillar{background:var(--surface);border-radius:var(--radius);padding:28px;display:grid;gap:10px;align-content:start;transition:transform .25s ease,box-shadow .25s ease}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(21,48,47,.1)}
+.pillar .icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--soft);color:var(--accent);font-family:var(--display);font-size:1.4rem}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+@media (max-width:820px){.story{grid-template-columns:1fr}}
+.story p{margin-bottom:14px}
+.places{display:flex;flex-wrap:wrap;gap:8px}
+.places span{background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.88rem}
+.now{background:var(--surface);border-radius:var(--radius);padding:24px;display:grid;gap:12px}
+.now ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.now li{display:flex;gap:10px}
+.now li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--halo);margin-top:.6em}
+.beliefs{display:grid;gap:10px}
+details{background:var(--surface);border-radius:14px;padding:16px 20px;border:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-family:var(--body);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:820px){.projects{grid-template-columns:1fr}}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:10px;align-content:start;min-width:0;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.project:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(21,48,47,.1);border-color:var(--halo)}
+.project .kind{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.project .links{display:flex;flex-wrap:wrap;gap:16px;margin-top:4px}
+.project .links a{font-weight:600;text-decoration:none}
+.project .links a:hover{text-decoration:underline}
+.featured{grid-column:1/-1;background:var(--soft);border-color:transparent}
+.list{display:grid;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;padding-block:18px;border-bottom:1px solid var(--line)}
+@media (max-width:620px){.item{grid-template-columns:1fr;gap:4px}}
+.item .when{color:var(--accent);font-weight:700}
+.item b{display:block}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+@media (max-width:820px){.split{grid-template-columns:1fr}}
+.ticks{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.ticks li{padding-left:14px;border-left:3px solid var(--halo)}
+.contact{background:var(--band);color:var(--band-ink);border-radius:28px;margin-block:24px 56px}
+.contact .inner{padding:56px clamp(24px,5vw,56px);display:grid;gap:18px}
+.contact .eyebrow{color:var(--band-gold)}
+.contact p{color:var(--band-muted);max-width:46ch}
+.contact .btn.line{background:transparent;color:var(--band-ink);border-color:#3e6a6a}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nuhamin Tesfay</a>
+    <div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#research">Research</a><a href="pitch.html">Pitch deck</a><a href="#contact">Say hi</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hello">
+      <p class="wave">Hi, I’m Nuhamin.</p>
+      <h1>I help organizations use AI <span class="rotate" id="rotate">safely</span>, and get real value from it.</h1>
+      <p class="lead">Most teams have AI tools. Few have people who use them well, or the guardrails to use them safely. That’s the gap I love closing.</p>
+      <p class="belief">AI is only as safe as the people who build it and use it.</p>
+      <div class="row"><a class="btn gold" href="pitch.html">See my pitch deck</a><a class="btn line" href="https://nuhamin-bit.github.io/ai-fluency-lab/check.html">Try my AI Fluency Check</a></div>
+    </div>
+    <div class="portrait">
+      <img src="files/headshot.jpg" alt="Portrait of Nuhamin Tesfay" onerror="this.outerHTML='<div class=&quot;initials&quot; role=&quot;img&quot; aria-label=&quot;Nuhamin Tesfay&quot;>NT</div>'">
+      <p class="badge"><span>●</span> Open to AI roles</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="block tint-sage" aria-labelledby="do-h">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">What I do</p><h2 id="do-h">Three ways I help teams <em>use AI well</em></h2></div>
+    <div class="pillars">
+      <div class="pillar"><span class="icon">G</span><h3>Govern</h3><p class="muted">I turn frameworks like NIST AI RMF, ISO/IEC 42001 and the EU AI Act into simple rules people actually follow.</p></div>
+      <div class="pillar"><span class="icon">A</span><h3>Assess</h3><p class="muted">I find where AI can go wrong, from security and privacy to bias and accuracy, before it hurts anyone.</p></div>
+      <div class="pillar"><span class="icon">E</span><h3>Enable</h3><p class="muted">I help people build real confidence with AI, and I measure whether it’s working.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <p class="eyebrow">A little about me</p>
+        <h2 id="about-h" style="margin:10px 0 20px">My path is <em>my asset</em></h2>
+        <p>I didn’t take a straight line into AI, and I’m glad. Training teams across four countries taught me how people learn. Managing operations risk taught me how decisions go wrong. Working on development programs at the Embassy of France, including programs on online gender-based violence, showed me how technology can hurt the people with the least power.</p>
+        <p>Now I bring all of that to AI. I’m finishing my master’s in cybersecurity, I research AI fluency and governance, and I translate between technical teams and leadership, in English, French or Amharic.</p>
+        <div class="places" aria-label="Places that shaped me"><span>Addis Ababa</span><span>North Manchester, Indiana</span><span>Arlington, Virginia</span><span>Teams in Tanzania, India and Singapore</span></div>
+      </div>
+      <div style="display:grid;gap:18px">
+        <div class="now">
+          <p class="eyebrow">Right now</p>
+          <ul>
+            <li>Finishing my M.S. in Cybersecurity at Marymount University</li>
+            <li>Researching how AI agents can be misused, and how to govern them</li>
+            <li>Growing the AI Fluency Lab, my free tools for safer AI use</li>
+            <li>Looking for my next role in AI governance, risk or enablement</li>
+          </ul>
+        </div>
+        <div class="beliefs">
+          <p class="eyebrow">What I believe</p>
+          <details><summary>Safe use comes before smart use</summary><p>People start using AI on day one. The rules have to come before the skills, so no one learns the hard way.</p></details>
+          <details><summary>Governance should help people move faster</summary><p>Good guardrails are simple, proportionate and easy to follow. If they slow everyone down, they won’t be followed.</p></details>
+          <details><summary>People are the real security layer</summary><p>The best AI policy fails if people don’t know how to judge AI output. That’s why I care so much about AI fluency.</p></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint-blush" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Work</p><h2 id="work-h">Research I turned into <em>tools people use</em></h2></div>
+    <div class="projects">
+      <article class="project featured">
+        <p class="kind">Live tool · AI enablement</p>
+        <h3>AI Fluency Lab</h3>
+        <p class="muted">A free 10-minute AI Fluency Check that scores four abilities and gives you a learning plan, plus the AI Readiness Toolkit for teams.</p>
+        <div class="links"><a href="https://nuhamin-bit.github.io/ai-fluency-lab/">Visit the site →</a><a href="https://github.com/Nuhamin-bit/ai-fluency-lab">Code</a></div>
+      </article>
+      <article class="project">
+        <p class="kind">Toolkit · AI adoption</p>
+        <h3>AI Readiness Toolkit</h3>
+        <p class="muted">A 4-week program for small teams: skills check, session guides, a safe-use policy and a results tracker.</p>
+        <div class="links"><a href="https://github.com/Nuhamin-bit/ai-readiness-toolkit">View on GitHub →</a></div>
+      </article>
+      <article class="project">
+        <p class="kind">Research · AI governance</p>
+        <h3>AI Governance Framework</h3>
+        <p class="muted">Six standards, including NIST AI RMF, ISO/IEC 42001 and the EU AI Act, scored on how well they cover AI agents.</p>
+        <div class="links"><a href="https://github.com/Nuhamin-bit/ai-governance-framework">View on GitHub →</a></div>
+      </article>
+      <article class="project">
+        <p class="kind">Research · AI security</p>
+        <h3>Agentic AI Threat Model</h3>
+        <p class="muted">How AI agents could target the post-quantum cryptography supply chain, and how maintainers can spot them.</p>
+        <div class="links"><a href="https://github.com/Nuhamin-bit/agentic-ai-threat-model">View on GitHub →</a></div>
+      </article>
+      <article class="project">
+        <p class="kind">Hands-on · Cybersecurity &amp; GRC</p>
+        <h3>Security Compliance Analysis</h3>
+        <p class="muted">Vulnerability assessments mapped to NIST, HIPAA, GDPR and PCI DSS, so findings make sense to compliance teams.</p>
+        <div class="links"><a href="https://github.com/Nuhamin-bit/security-compliance-analysis">View on GitHub →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="research" aria-labelledby="res-h">
+  <div class="wrap">
+    <div class="split">
+      <div style="display:grid;gap:18px;align-content:start">
+        <div class="head"><p class="eyebrow">Research &amp; talks</p><h2 id="res-h">Sharing what <em>I’m learning</em></h2></div>
+        <div class="list">
+          <div class="item"><span class="when">Published</span><div><b>AI Fluency as a Dimension of Cybersecurity Capital</b><span class="muted">SEINFORMS 2026 Proceedings; presented</span></div></div>
+          <div class="item"><span class="when">Presented</span><div><b>Trust Erosion and Alert Fatigue in AI-Driven Fraud Detection</b><span class="muted">With D. Livermore and J. Maxwellson, SEINFORMS 2026</span></div></div>
+          <div class="item"><span class="when">Speaker</span><div><b>Women Shaping the Future of Cyber</b><span class="muted">Cyber Saints WiCyS Conference 2026</span></div></div>
+          <div class="item"><span class="when">Session chair</span><div><b>Southeastern INFORMS Conference</b><span class="muted">2026</span></div></div>
+        </div>
+      </div>
+      <div style="display:grid;gap:18px;align-content:start">
+        <h3>Education</h3>
+        <ul class="ticks">
+          <li><b>M.S. Cybersecurity</b> · Marymount University · Dec 2026</li>
+          <li><b>MBA</b> · Quantic School of Business and Technology</li>
+          <li><b>B.S. Business Management</b> · Manchester University</li>
+        </ul>
+        <h3>Certifications</h3>
+        <ul class="ticks">
+          <li>Anthropic: AI Fluency · AI Capabilities and Limitations · Claude 101</li>
+          <li>Google: AI · Cybersecurity · Project Management (in progress)</li>
+        </ul>
+        <div class="row"><a class="btn line" href="files/Nuhamin_Tesfay_Resume.pdf">Download my resume</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="wrap">
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="inner">
+      <p class="eyebrow">Say hi</p>
+      <h2 id="contact-h">Working out how to adopt AI responsibly? <em>Let’s talk.</em></h2>
+      <p>I’d love to hear what your team is building, or just swap ideas about AI, security and people. I’m based in the Washington, DC area and open to new roles.</p>
+      <div class="row"><a class="btn gold" href="https://www.linkedin.com/in/nuhamintesfay" target="_blank" rel="noopener">Message me on LinkedIn</a><a class="btn line" href="https://github.com/Nuhamin-bit" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">Made with care by Nuhamin Tesfay · Washington, DC · 2026</div></footer>
+
+<script>
+(function(){
+  var words=["safely","ethically","confidently","wisely"],i=0,el=document.getElementById("rotate");
+  if(!el||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  setInterval(function(){
+    el.style.opacity=0;
+    setTimeout(function(){i=(i+1)%words.length;el.textContent=words[i];el.style.opacity=1},350);
+  },2600);
+})();
+</script>
+</body>
+</html>
