@@ -12,35 +12,37 @@
 <style>
 main.deck{padding-block:28px 48px}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.stage{container-type:inline-size;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(16,40,43,.18);background:#10282b}
-.slide{position:absolute;inset:0;padding:6cqw 6.5cqw;display:none;flex-direction:column;gap:2.4cqw;font-family:var(--body);color:#10282b;background:#f7f8f6}
+.stage{container-type:inline-size;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(17,24,39,.18);background:#111827}
+.slide{position:absolute;inset:0;padding:6cqw 6.5cqw;display:none;flex-direction:column;gap:2.4cqw;font-family:var(--body);color:#111827;background:#FBFBFA}
 .slide.on{display:flex}
-.slide.dark{background:#10282b;color:#f3f1ea}
-.slide.teal{background:#1f6f68;color:#f3f1ea}
-.slide .ey{font-size:1.15cqw;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#1f6f68}
-.slide.dark .ey,.slide.teal .ey{color:#d9a441}
-.slide h2{font-family:var(--display);font-weight:400;font-size:3.9cqw;line-height:1.08}
-.slide h1{font-family:var(--display);font-weight:400;font-size:6.4cqw;line-height:1.02}
+.slide.dark{background:#111827;color:#F9FAFB}
+.slide.teal{background:#C2410C;color:#FFFFFF}
+.slide .ey{font-size:1.15cqw;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C2410C}
+.slide.dark .ey{color:#F59E6B}
+.slide.teal .ey{color:#FDE3D3}
+.slide h2{font-family:var(--display);font-weight:700;font-size:3.9cqw;line-height:1.08}
+.slide h1{font-family:var(--display);font-weight:700;font-size:6.4cqw;line-height:1.02}
 .slide p,.slide li,.slide td,.slide th{font-size:1.55cqw;line-height:1.45}
-.slide .sub{color:#4d5f61}
-.slide.dark .sub,.slide.teal .sub{color:#c9d8d5}
+.slide .sub{color:#4B5563}
+.slide.dark .sub{color:#D1D5DB}
+.slide.teal .sub{color:#FFF1E8}
 .cols{display:grid;gap:2cqw;grid-template-columns:repeat(var(--n,3),minmax(0,1fr))}
-.card{background:#fff;border:1px solid #e1e4e2;border-radius:1.2cqw;padding:2.2cqw;display:flex;flex-direction:column;gap:1cqw}
-.dark .card,.teal .card{background:transparent;border:0;border-top:.25cqw solid #d9a441;border-radius:0;padding:1.4cqw 0 0}
+.card{background:#fff;border:1px solid #E5E7EB;border-radius:1.2cqw;padding:2.2cqw;display:flex;flex-direction:column;gap:1cqw}
+.dark .card,.teal .card{background:transparent;border:0;border-top:.25cqw solid #F59E6B;border-radius:0;padding:1.4cqw 0 0}
 .card h3{font-family:var(--body);font-weight:700;font-size:2cqw}
-.big{font-family:var(--display);font-size:5cqw;line-height:1;color:#1f6f68}
-.pill{display:inline-block;border:1px solid #3e6a6a;border-radius:99px;padding:.6cqw 1.4cqw;font-size:1.25cqw;margin:0 .6cqw .6cqw 0}
-.gold{color:#d9a441}
-.quote{font-family:var(--display);font-style:italic;font-size:2.6cqw;line-height:1.25;color:#d9a441}
+.big{font-family:var(--display);font-size:5cqw;line-height:1;color:#C2410C}
+.pill{display:inline-block;border:1px solid #4B5563;border-radius:99px;padding:.6cqw 1.4cqw;font-size:1.25cqw;margin:0 .6cqw .6cqw 0}
+.gold{color:#F59E6B}
+.quote{font-family:var(--display);font-style:italic;font-weight:700;font-size:2.6cqw;line-height:1.25;color:#F59E6B}
 .tl{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1.2cqw}
-.tl div{border-top:.45cqw solid #d9a441;padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw}
-.tl b{font-size:1.5cqw;color:#1f6f68}
+.tl div{border-top:.45cqw solid #E8835A;padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw}
+.tl b{font-size:1.5cqw;color:#C2410C}
 .tl strong{font-size:1.7cqw;line-height:1.25}
-.tl span{font-size:1.45cqw;color:#4d5f61;line-height:1.4}
+.tl span{font-size:1.45cqw;color:#4B5563;line-height:1.4}
 table.cmp{border-collapse:collapse;width:100%}
-table.cmp th{background:#10282b;color:#fff;text-align:left;padding:1cqw 1.2cqw}
-table.cmp td{padding:.9cqw 1.2cqw;border-bottom:1px solid #d5dddb}
-table.cmp td:first-child{color:#4d5f61;width:34%}
+table.cmp th{background:#111827;color:#fff;text-align:left;padding:1cqw 1.2cqw}
+table.cmp td{padding:.9cqw 1.2cqw;border-bottom:1px solid #E5E7EB}
+table.cmp td:first-child{color:#4B5563;width:34%}
 table.cmp td:last-child{font-weight:600}
 .num{position:absolute;right:3cqw;bottom:2.4cqw;font-size:1.1cqw;opacity:.6}
 .controls{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:16px}
