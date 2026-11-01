@@ -1,38 +1,43 @@
-/* Portfolio: deep teal ink, warm gold accent, serif display with a clean sans body. Matches the pitch deck. */
+/* Warm, human portfolio: deep teal ink, soft gold, blush and sage on warm white. */
 :root{
-  --bg:#f6f7f5; --surface:#ffffff; --ink:#10282b; --muted:#4d5f61; --line:#dde3e1;
-  --accent:#1f6f68; --accent-ink:#ffffff; --gold:#9a6b12; --soft:#e7efed;
-  --band:#10282b; --band-ink:#f3f1ea; --band-muted:#b9cecb; --band-gold:#d9a441;
-  --display:"DM Serif Display",Georgia,"Times New Roman",serif;
-  --body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  --bg:#fbf8f4; --surface:#ffffff; --ink:#15302f; --muted:#5b6b69; --line:#e8e1d8;
+  --accent:#1f6f68; --accent-ink:#ffffff; --gold:#a8771c; --halo:#e2b664;
+  --blush:#f6e6dc; --sage:#e3ece6; --soft:#eef4f1;
+  --band:#15302f; --band-ink:#fbf8f4; --band-muted:#c3d3cf; --band-gold:#e2b664;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --radius:18px;
 }
 @media (prefers-color-scheme: dark){:root{
-  --bg:#0c1b1d; --surface:#122629; --ink:#e9efed; --muted:#a7bbb8; --line:#24393c;
-  --accent:#5cc0b5; --accent-ink:#0c1b1d; --gold:#e1b45b; --soft:#173235;
-  --band:#081416; --band-ink:#f3f1ea; --band-muted:#a7bbb8; --band-gold:#e1b45b; color-scheme:dark}}
+  --bg:#0f1f1f; --surface:#162a2a; --ink:#eef3f1; --muted:#a9bbb8; --line:#26403f;
+  --accent:#6cc7bc; --accent-ink:#0f1f1f; --gold:#e8bf6e; --halo:#e8bf6e;
+  --blush:#2a2422; --sage:#1b302d; --soft:#173130;
+  --band:#0a1717; --band-ink:#f3f1ea; --band-muted:#a9bbb8; --band-gold:#e8bf6e; color-scheme:dark}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.6rem,7vw,4.4rem)}
-h2{font-size:clamp(1.9rem,4.5vw,2.7rem)}
-h3{font-size:1.4rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.5rem,6.5vw,4.2rem)}
+h2{font-size:clamp(1.9rem,4.4vw,2.8rem)}
+h3{font-size:1.35rem}
 p{margin:0}
 a{color:var(--accent)}
-.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+em{font-family:var(--display);font-style:italic;font-weight:400}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .muted{color:var(--muted)}
-.btn{display:inline-block;font:inherit;font-weight:600;font-size:.95rem;border-radius:999px;padding:12px 22px;text-decoration:none;border:1.5px solid transparent}
-.btn.gold{background:var(--band-gold);color:#10282b}
-.btn.line{border-color:currentColor;color:inherit}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:600;font-size:.95rem;border-radius:999px;padding:12px 22px;text-decoration:none;border:1.5px solid transparent;transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,48,47,.15)}
+.btn.gold{background:var(--halo);color:#15302f}
 .btn.solid{background:var(--accent);color:var(--accent-ink)}
-.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--band-gold);outline-offset:3px}
+.btn.line{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--halo);outline-offset:3px}
 .row{display:flex;flex-wrap:wrap;gap:12px}
-nav.top{position:sticky;top:0;z-index:10;background:var(--band);color:var(--band-ink)}
+nav.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;flex-wrap:wrap}
-nav.top .brand{font-family:var(--display);font-size:1.25rem;color:var(--band-ink);text-decoration:none}
+nav.top .brand{font-family:var(--display);font-size:1.3rem;color:var(--ink);text-decoration:none}
 nav.top .links{display:flex;gap:20px;flex-wrap:wrap}
-nav.top .links a{color:var(--band-muted);text-decoration:none;font-size:.95rem;font-weight:500}
-nav.top .links a:hover,nav.top .links a[aria-current]{color:var(--band-gold)}
+nav.top .links a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500}
+nav.top .links a:hover,nav.top .links a[aria-current]{color:var(--accent)}
 footer.site{border-top:1px solid var(--line);padding-block:32px 48px;color:var(--muted);font-size:.9rem}
