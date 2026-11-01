@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pitch Deck | Nuhamin H. Tesfay</title>
+<meta name="description" content="A 13-slide pitch deck: how Nuhamin H. Tesfay helps organizations adopt AI safely, ethically and effectively.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+main.deck{padding-block:28px 48px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.stage{container-type:inline-size;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(16,40,43,.18);background:#10282b}
+.slide{position:absolute;inset:0;padding:6cqw 6.5cqw;display:none;flex-direction:column;gap:2.4cqw;font-family:var(--body);color:#10282b;background:#f7f8f6}
+.slide.on{display:flex}
+.slide.dark{background:#10282b;color:#f3f1ea}
+.slide.teal{background:#1f6f68;color:#f3f1ea}
+.slide .ey{font-size:1.15cqw;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#1f6f68}
+.slide.dark .ey,.slide.teal .ey{color:#d9a441}
+.slide h2{font-family:var(--display);font-weight:400;font-size:3.9cqw;line-height:1.08}
+.slide h1{font-family:var(--display);font-weight:400;font-size:6.4cqw;line-height:1.02}
+.slide p,.slide li,.slide td,.slide th{font-size:1.55cqw;line-height:1.45}
+.slide .sub{color:#4d5f61}
+.slide.dark .sub,.slide.teal .sub{color:#c9d8d5}
+.cols{display:grid;gap:2cqw;grid-template-columns:repeat(var(--n,3),minmax(0,1fr))}
+.card{background:#fff;border:1px solid #e1e4e2;border-radius:1.2cqw;padding:2.2cqw;display:flex;flex-direction:column;gap:1cqw}
+.dark .card,.teal .card{background:transparent;border:0;border-top:.25cqw solid #d9a441;border-radius:0;padding:1.4cqw 0 0}
+.card h3{font-family:var(--body);font-weight:700;font-size:2cqw}
+.big{font-family:var(--display);font-size:5cqw;line-height:1;color:#1f6f68}
+.pill{display:inline-block;border:1px solid #3e6a6a;border-radius:99px;padding:.6cqw 1.4cqw;font-size:1.25cqw;margin:0 .6cqw .6cqw 0}
+.gold{color:#d9a441}
+.quote{font-family:var(--display);font-style:italic;font-size:2.6cqw;line-height:1.25;color:#d9a441}
+.tl{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1.2cqw}
+.tl div{border-top:.45cqw solid #d9a441;padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw}
+.tl b{font-size:1.5cqw;color:#1f6f68}
+.tl strong{font-size:1.7cqw;line-height:1.25}
+.tl span{font-size:1.45cqw;color:#4d5f61;line-height:1.4}
+table.cmp{border-collapse:collapse;width:100%}
+table.cmp th{background:#10282b;color:#fff;text-align:left;padding:1cqw 1.2cqw}
+table.cmp td{padding:.9cqw 1.2cqw;border-bottom:1px solid #d5dddb}
+table.cmp td:first-child{color:#4d5f61;width:34%}
+table.cmp td:last-child{font-weight:600}
+.num{position:absolute;right:3cqw;bottom:2.4cqw;font-size:1.1cqw;opacity:.6}
+.controls{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:16px}
+.controls button{font:inherit;font-weight:600;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:10px 20px;cursor:pointer}
+.controls button:disabled{opacity:.4;cursor:default}
+.count{font-variant-numeric:tabular-nums;color:var(--muted);min-width:5ch;text-align:center}
+.hint{text-align:center;font-size:.85rem;color:var(--muted);margin-top:8px}
+@media (max-width:700px){
+  .stage{aspect-ratio:auto;container-type:normal;background:none;box-shadow:none;overflow:visible;border-radius:0;display:grid;gap:16px}
+  .slide{position:relative;display:flex !important;inset:auto;padding:24px 20px;border-radius:14px;gap:14px}
+  .slide h1{font-size:2.1rem !important}
+  .slide h2{font-size:1.55rem !important}
+  .slide p,.slide li,.slide td,.slide th,.slide .sub{font-size:.95rem !important}
+  .slide .ey{font-size:.7rem !important}
+  .big{font-size:2rem !important}
+  .pill{font-size:.78rem;padding:4px 10px}
+  .quote{font-size:1.25rem}
+  .cols{grid-template-columns:1fr !important;gap:14px}
+  .card{padding:16px;border-radius:10px}
+  .card h3{font-size:1.05rem}
+  .tl{grid-template-columns:1fr 1fr;gap:14px}
+  .tl b,.tl strong,.tl span{font-size:.85rem}
+  table.cmp th,table.cmp td{padding:8px}
+  .slide div[style*="flex:1"]{display:none}
+  .controls,.hint{display:none}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nuhamin Tesfay</a>
+    <div class="links"><a href="index.html#about">About</a><a href="index.html#work">Work</a><a href="index.html#research">Research</a><a href="pitch.html" aria-current="page">Pitch deck</a><a href="index.html#contact">Say hi</a></div>
+  </div>
+</nav>
+<main class="deck wrap">
+  <div class="bar"><h2 style="font-size:1.6rem">Pitch deck</h2><a class="btn solid" href="files/Nuhamin_Tesfay_Pitch_Deck.pdf">Download PDF</a></div>
+
+  <div class="stage" id="stage" role="region" aria-roledescription="slide deck" aria-label="Pitch deck" tabindex="0">
+
+    <section class="slide dark" aria-label="Slide 1">
+      <div style="flex:1"></div>
+      <p class="ey">AI Governance · AI Ethics · AI Enablement</p>
+      <h1>Nuhamin H. Tesfay</h1>
+      <p class="sub" style="font-size:2.2cqw">I help organizations adopt AI safely, ethically and effectively.</p>
+      <div><span class="pill">M.S. Cybersecurity</span><span class="pill">MBA</span><span class="pill">Published AI researcher</span><span class="pill">English · French · Amharic</span></div>
+      <div style="flex:1"></div>
+    </section>
+
+    <section class="slide dark" aria-label="Slide 2">
+      <p class="ey">The problem I solve</p>
+      <h2>AI has become both a shield and a target</h2>
+      <div class="cols">
+        <div class="card"><h3>A shield</h3><p class="sub">Organizations use AI to work faster and defend themselves, from drafting to detecting fraud.</p></div>
+        <div class="card"><h3>A target</h3><p class="sub">Attackers misuse AI, and AI tools can leak data, make errors, or treat people unfairly.</p></div>
+        <div class="card"><h3>The gap</h3><p class="sub">Most organizations adopt AI faster than they can govern it or train people to use it well.</p></div>
+      </div>
+      <p class="quote">AI is only as safe as the people who build it and use it.</p>
+    </section>
+
+    <section class="slide" aria-label="Slide 3">
+      <p class="ey">What I do</p>
+      <h2>Three ways I help organizations use AI well</h2>
+      <div class="cols">
+        <div class="card"><span class="big">01</span><h3>Govern</h3><p class="sub">Turn NIST AI RMF, ISO/IEC 42001 and the EU AI Act into practical policies and controls.</p></div>
+        <div class="card"><span class="big">02</span><h3>Assess</h3><p class="sub">Find AI risks and ethical impacts before they cause harm: security, privacy, bias, accuracy.</p></div>
+        <div class="card"><span class="big">03</span><h3>Enable</h3><p class="sub">Train teams to use AI confidently and responsibly, and measure the results.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 4">
+      <p class="ey">At a glance</p>
+      <h2>Experience that travels</h2>
+      <div class="cols" style="row-gap:2.4cqw">
+        <div><span class="big">6</span><p>years in risk, programs and training</p></div>
+        <div><span class="big">4</span><p>regions: U.S., Ethiopia, East Africa and Asia</p></div>
+        <div><span class="big">6</span><p>AI governance standards scored in my framework</p></div>
+        <div><span class="big">2</span><p>master’s degrees: Cybersecurity and MBA</p></div>
+        <div><span class="big">3</span><p>languages: English, French and Amharic</p></div>
+        <div><span class="big">2026</span><p>published, presented and session chair at SEINFORMS</p></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 5">
+      <p class="ey">My path is my asset</p>
+      <h2>Every role built a piece of what I do now</h2>
+      <div class="tl">
+        <div><b>2017–2020</b><strong>Manchester University</strong><span>B.S. Business; recruiting, library and student leadership</span></div>
+        <div><b>2019</b><strong>Ethiopian Airlines</strong><span>Performance systems and onboarding training</span></div>
+        <div><b>2020–2021</b><strong>Hentig International</strong><span>Assistant to the General Manager</span></div>
+        <div><b>2021–2022</b><strong>Wilmar International</strong><span>Training programs across four countries</span></div>
+        <div><b>2022–2024</b><strong>Hentig International</strong><span>Operations risk: risk register, controls, due diligence</span></div>
+        <div><b>2024–2025</b><strong>Embassy of France</strong><span>Development programs and policy reporting</span></div>
+        <div style="border-color:#1f6f68"><b>2025–now</b><strong>Marymount University</strong><span>M.S. Cybersecurity; AI governance and fluency research</span></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 6">
+      <p class="ey">My research</p>
+      <h2>Two questions: is AI governed, and are people ready?</h2>
+      <div class="cols" style="--n:2">
+        <div class="card"><p class="ey">AI governance</p><h3>A framework scoring six standards</h3><p class="sub">Five layers comparing NIST AI RMF, ISO/IEC 42001, the EU AI Act, NIST CSF 2.0 Cyber AI Profile, OWASP and MITRE ATLAS, focused on AI agents.</p></div>
+        <div class="card"><p class="ey">AI fluency</p><h3>The Cybersecurity &amp; AI Capital Model</h3><p class="sub">Measures Description, Delegation, Discernment and Diligence, plus cybersecurity literacy and workforce readiness. Published, SEINFORMS 2026.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 7">
+      <p class="ey">What I’ve built</p>
+      <h2>Research turned into tools people can use</h2>
+      <div class="cols">
+        <div class="card"><h3>AI Fluency Check</h3><p class="sub">A free online self-assessment that scores four AI fluency abilities and gives a learning plan.</p></div>
+        <div class="card"><h3>AI Readiness Toolkit</h3><p class="sub">A 4-week program: skills check, weekly training, safe-use rules and a results tracker.</p></div>
+        <div class="card"><h3>Security Compliance Analysis</h3><p class="sub">Vulnerability assessments mapped to NIST, HIPAA, GDPR and PCI DSS.</p></div>
+      </div>
+    </section>
+
+    <section class="slide teal" aria-label="Slide 8">
+      <div style="flex:1"></div>
+      <p class="ey">Why I care about AI ethics</p>
+      <h2 style="font-size:3.4cqw">“At the Embassy of France, I managed programs on cyber-facilitated gender-based violence. I saw how technology can harm vulnerable people.”</h2>
+      <p class="sub" style="max-width:80%">That is why I bring a people-first lens to AI: checking for bias, protecting privacy, keeping humans in control of important decisions, and being transparent with the people AI affects.</p>
+      <div style="flex:1"></div>
+    </section>
+
+    <section class="slide" aria-label="Slide 9">
+      <p class="ey">How I’d help</p>
+      <h2>My first 90 days</h2>
+      <div class="cols">
+        <div class="card"><span class="big" style="font-size:3.4cqw">Days 1–30</span><h3>Listen and map</h3><p class="sub">Meet stakeholders, map where AI is used, and give leadership a clear picture of AI readiness.</p></div>
+        <div class="card"><span class="big" style="font-size:3.4cqw">Days 31–60</span><h3>Quick wins</h3><p class="sub">Practical AI use guidelines, an inventory of AI tools and risks, and a first training session.</p></div>
+        <div class="card"><span class="big" style="font-size:3.4cqw">Days 61–90</span><h3>Build to last</h3><p class="sub">A repeatable review process, metrics for adoption and risk, and a 6–12 month roadmap.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 10">
+      <p class="ey">Why me</p>
+      <h2>A rare combination in one person</h2>
+      <table class="cmp">
+        <tr><th>Most candidates</th><th>What I bring</th></tr>
+        <tr><td>Write AI policy or teach AI tools</td><td>Do both, so policies actually get followed</td></tr>
+        <tr><td>Know AI regulation in theory</td><td>Six years of real risk work: registers, controls, reporting to leaders</td></tr>
+        <tr><td>Speak to engineers or to leaders</td><td>Translate between technical teams and leadership, in three languages</td></tr>
+        <tr><td>Talk about AI risk</td><td>Published research and working tools that measure AI fluency</td></tr>
+        <tr><td>Treat security separately</td><td>A cybersecurity degree that sees how AI is attacked and misused</td></tr>
+      </table>
+    </section>
+
+    <section class="slide dark" aria-label="Slide 11">
+      <p class="ey">Proof, not promises</p>
+      <h2>Published, presented and building</h2>
+      <div class="cols" style="--n:2">
+        <div class="card"><h3>Research</h3><p class="sub">AI fluency research published in the SEINFORMS 2026 Proceedings; a second paper presented; session chair.</p></div>
+        <div class="card"><h3>Speaking</h3><p class="sub">“Women Shaping the Future of Cyber,” Cyber Saints WiCyS Conference, 2026.</p></div>
+        <div class="card"><h3>Tools</h3><p class="sub">AI Fluency Check and AI Readiness Toolkit, free and public.</p></div>
+        <div class="card"><h3>Credentials</h3><p class="sub">Anthropic AI Fluency, Google AI and Cybersecurity certificates.</p></div>
+      </div>
+    </section>
+
+    <section class="slide dark" aria-label="Slide 12">
+      <div style="flex:1"></div>
+      <p class="ey">Let’s talk</p>
+      <h1 style="font-size:5cqw">Let’s help your organization adopt AI with confidence.</h1>
+      <p class="sub" style="font-size:1.8cqw">linkedin.com/in/nuhamintesfay · github.com/Nuhamin-bit · Washington, DC</p>
+      <div style="flex:1"></div>
+    </section>
+
+  </div>
+
+  <div class="controls">
+    <button type="button" id="prev" aria-label="Previous slide">← Prev</button>
+    <span class="count" id="count" aria-live="polite">1 / 12</span>
+    <button type="button" id="next" aria-label="Next slide">Next →</button>
+  </div>
+  <p class="hint">Use the arrow keys or the buttons to move between slides.</p>
+</main>
+<footer class="site"><div class="wrap">© 2026 Nuhamin H. Tesfay · <a href="index.html">Back to portfolio</a></div></footer>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll(".slide"));
+  var i=0, stage=document.getElementById("stage"), count=document.getElementById("count");
+  var prev=document.getElementById("prev"), next=document.getElementById("next");
+  function fromHash(){var m=/^#slide-(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):0}
+  function show(n,push){
+    i=Math.min(Math.max(n,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle("on",k===i);s.setAttribute("aria-hidden",k===i?"false":"true")});
+    count.textContent=(i+1)+" / "+slides.length;
+    prev.disabled=i===0; next.disabled=i===slides.length-1;
+    if(push){try{history.replaceState(null,"","#slide-"+(i+1))}catch(e){}}
+  }
+  prev.onclick=function(){show(i-1,true)};
+  next.onclick=function(){show(i+1,true)};
+  document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight"||e.key==="PageDown"){show(i+1,true)}
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){show(i-1,true)}
+  });
+  var x0=null;
+  stage.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});
+  stage.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1),true);x0=null});
+  window.addEventListener("hashchange",function(){show(fromHash(),false)});
+  show(fromHash(),false);
+})();
+</script>
+</body>
+</html>
