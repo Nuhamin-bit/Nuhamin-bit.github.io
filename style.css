@@ -4,7 +4,7 @@
   --accent:#1f6f68; --accent-ink:#ffffff; --gold:#a8771c; --halo:#e2b664;
   --blush:#f6e6dc; --sage:#e3ece6; --soft:#eef4f1;
   --band:#15302f; --band-ink:#fbf8f4; --band-muted:#c3d3cf; --band-gold:#e2b664;
-  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --display:"Times New Roman",Times,serif;
   --body:"DM Sans","Segoe UI",system-ui,sans-serif;
   --radius:18px;
 }
