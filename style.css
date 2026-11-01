@@ -1,18 +1,17 @@
-/* Warm, human portfolio: deep teal ink, soft gold, blush and sage on warm white. */
 :root{
-  --bg:#fbf8f4; --surface:#ffffff; --ink:#15302f; --muted:#5b6b69; --line:#e8e1d8;
-  --accent:#1f6f68; --accent-ink:#ffffff; --gold:#a8771c; --halo:#e2b664;
-  --blush:#f6e6dc; --sage:#e3ece6; --soft:#eef4f1;
-  --band:#15302f; --band-ink:#fbf8f4; --band-muted:#c3d3cf; --band-gold:#e2b664;
+  --bg:#FBFBFA; --surface:#FFFFFF; --ink:#111827; --muted:#4B5563; --line:#E5E7EB;
+  --accent:#C2410C; --accent-ink:#FFFFFF; --gold:#C2410C; --halo:#E8835A;
+  --blush:#F6F1EC; --sage:#F3F4F6; --soft:#FCEEE6;
+  --band:#111827; --band-ink:#F9FAFB; --band-muted:#D1D5DB; --band-gold:#F59E6B;
   --display:"Times New Roman",Times,serif;
   --body:"DM Sans","Segoe UI",system-ui,sans-serif;
   --radius:18px;
 }
 @media (prefers-color-scheme: dark){:root{
-  --bg:#0f1f1f; --surface:#162a2a; --ink:#eef3f1; --muted:#a9bbb8; --line:#26403f;
-  --accent:#6cc7bc; --accent-ink:#0f1f1f; --gold:#e8bf6e; --halo:#e8bf6e;
-  --blush:#2a2422; --sage:#1b302d; --soft:#173130;
-  --band:#0a1717; --band-ink:#f3f1ea; --band-muted:#a9bbb8; --band-gold:#e8bf6e; color-scheme:dark}}
+  --bg:#111827; --surface:#1F2937; --ink:#F9FAFB; --muted:#9CA3AF; --line:#374151;
+  --accent:#FB923C; --accent-ink:#111827; --gold:#FB923C; --halo:#FB923C;
+  --blush:#1A2230; --sage:#1A2230; --soft:#2A1F1A;
+  --band:#0B0F19; --band-ink:#F9FAFB; --band-muted:#9CA3AF; --band-gold:#FB923C; color-scheme:dark}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
